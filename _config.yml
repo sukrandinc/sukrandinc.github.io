@@ -21,7 +21,7 @@ repository               : "academicpages/academicpages.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "disaster.jpeg"
+  avatar           : "profile.png"
   name             : "Sukran Dinc"
   pronouns         : # example: "she/her"  
   bio              : "Economics PhD student with an interest in experimental economics, mechanism design, and everything in between."
