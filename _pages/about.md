@@ -7,7 +7,6 @@ redirect_from:
   - /about.html
 ---
 
-I am a 4th-year PhD student at York University, interested in mechanism design, information design, experimental economics, and everything in between.
-
+I am a fourth-year Ph.D. student in Economics at York University, with research interests in experimental economics, behavioral economics, and mechanism design. I use experiments and data analysis to study how people make decisions and how institutions can be designed to promote fairness and efficiency.
 
 
