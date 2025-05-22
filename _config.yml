@@ -24,9 +24,8 @@ author:
   avatar           : "sukran_photo.png"
   name             : "Sukran Dinc"
   pronouns         : # example: "she/her"  
-  bio              : "👩‍🔬 PhD student in Economics at York University
-                    🔬 Researching behavior, decision-making, and fairness
-                    🛠️ Experiments • Data Analysis • oTree • Python • Stata"
+ bio: "PhD student in Economics at York University • Researching behavior, decision-making, and fairness • Skilled in experimental design, data analysis, oTree, Python, and Stata"
+
   location         : "Toronto"
   employer         : "York University"
   uri              : "https://sukrandinc.github.io"
