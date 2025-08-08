@@ -9,7 +9,7 @@ main:
     url: /publications/
   
   - title: "CV"
-    url: files/Sukran_Dinc_Cv.pdf
+    url: /files/Sukran_Dinc_Cv.pdf/
 
   - title: "Class Experiments"
     url: /class_experiments/    
