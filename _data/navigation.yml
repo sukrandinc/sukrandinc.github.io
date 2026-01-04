@@ -14,7 +14,12 @@ main:
 #  - title: "Class Experiments"
 #    url: /talks/    
 
+<<<<<<< HEAD
 #  - title: "Conferences"
 #    url: /teaching/    
+=======
+  - title: "Conferences"
+    url: /teaching/    
+>>>>>>> master
     
 
