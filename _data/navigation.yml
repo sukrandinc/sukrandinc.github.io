@@ -11,8 +11,8 @@ main:
   - title: "CV"
     url: /files/resume_sukran.pdf
 
-#  - title: "Class Experiments"
-#    url: /talks/    
+  - title: "Class Experiments"
+    url: /class-experiments/    
 
 #  - title: "Conferences"
 #    url: /teaching/    
