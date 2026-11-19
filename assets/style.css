@@ -313,9 +313,8 @@ details p {
   font-size: 0.97rem;
 }
 
-.institution > p {
-  margin: 0.4rem 0 0.75rem;
-  max-width: 38rem;
+.institution .courses {
+  margin-top: 0.75rem;
 }
 
 .courses {
@@ -343,12 +342,6 @@ details p {
 .terms {
   color: var(--muted);
   text-align: right;
-}
-
-.teaching-note {
-  margin: 0.9rem 0 0;
-  max-width: 38rem;
-  font-size: 0.97rem;
 }
 
 /* Footer */
