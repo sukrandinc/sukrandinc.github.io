@@ -540,3 +540,9 @@ details p {
   margin: 1.1rem 0 0;
   font-size: 1.06rem;
 }
+
+.demo-link {
+  margin: 0.45rem 0 0;
+  font-size: 0.97rem;
+  font-weight: 700;
+}
