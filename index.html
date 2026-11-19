@@ -14,7 +14,7 @@
   <link rel="icon" href="/images/favicon.ico">
   <link rel="preload" href="/assets/fonts/charis-sil-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/charis-sil-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/style.css?v=10">
+  <link rel="stylesheet" href="/assets/style.css?v=14">
 </head>
 <body id="top">
   <nav class="topbar" aria-label="Main">
@@ -54,6 +54,7 @@
       <strong>Research interests:</strong>
       <em>Experimental Economics, Behavioral Economics, Microeconomic Theory</em>
     </p>
+    <p class="cv-line"><a href="/files/resume_sukran.pdf">CV</a></p>
 
     <section id="research" aria-labelledby="jmp-heading">
       <h2 id="jmp-heading">Job market paper</h2>
@@ -168,6 +169,20 @@
         experiments have collected data from more than 5,000 participants.
       </p>
 
+      <figure class="bargain" aria-label="Animation: two participants split 100 points. Both first demand 70, so their claims overlap; they concede in turns until they agree on 50 each.">
+        <div class="bargain-labels" aria-hidden="true">
+          <span class="party party-a">Participant A asks for <strong data-a>70</strong></span>
+          <span class="party party-b">Participant B asks for <strong data-b>70</strong></span>
+        </div>
+        <div class="bargain-bar" aria-hidden="true">
+          <div class="fill fill-a" style="width:70%"></div>
+          <div class="fill fill-b" style="width:70%"></div>
+          <div class="overlap" style="left:30%;width:40%"></div>
+        </div>
+        <div class="bargain-scale" aria-hidden="true"><span>0</span><span>50</span><span>100</span></div>
+        <figcaption class="bargain-status" aria-hidden="true">Demands add up to 140: no agreement yet</figcaption>
+      </figure>
+
       <h3 class="subhead">Research experiments</h3>
 
       <article class="paper">
@@ -212,5 +227,50 @@
 
     </main>
   </div>
+  <script>
+  (function () {
+    var fig = document.querySelector('.bargain');
+    if (!fig) return;
+    var steps = [[70, 70], [60, 70], [60, 60], [50, 60], [50, 50]];
+    var fa = fig.querySelector('.fill-a'), fb = fig.querySelector('.fill-b'), ov = fig.querySelector('.overlap');
+    var la = fig.querySelector('[data-a]'), lb = fig.querySelector('[data-b]'), st = fig.querySelector('.bargain-status');
+
+    function show(i) {
+      var a = steps[i][0], b = steps[i][1], over = a + b - 100;
+      fa.style.width = a + '%';
+      fb.style.width = b + '%';
+      ov.style.left = (100 - b) + '%';
+      ov.style.width = Math.max(0, over) + '%';
+      la.textContent = a;
+      lb.textContent = b;
+      var done = over <= 0;
+      fig.classList.toggle('agreed', done);
+      st.textContent = done ? 'Agreement: ' + a + ' and ' + b
+        : 'Demands add up to ' + (a + b) + ': no agreement yet';
+    }
+
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      show(steps.length - 1);
+      return;
+    }
+
+    var i = 0, timer = null;
+    function tick() {
+      i = (i + 1) % steps.length;
+      show(i);
+      timer = setTimeout(tick, i === steps.length - 1 ? 3200 : (i === 0 ? 1800 : 1300));
+    }
+    function start() { if (!timer) timer = setTimeout(tick, 1400); }
+    function stop() { clearTimeout(timer); timer = null; }
+
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (entries) {
+        entries[0].isIntersecting ? start() : stop();
+      }).observe(fig);
+    } else {
+      start();
+    }
+  })();
+  </script>
 </body>
 </html>
