@@ -121,40 +121,43 @@ summary:focus-visible {
   border-radius: 2px;
 }
 
+/* Two columns: identity on the left, content on the right */
+
 .page {
-  max-width: var(--measure);
+  display: grid;
+  grid-template-columns: 15rem minmax(0, var(--measure));
+  gap: 4.5rem;
+  max-width: 72rem;
   margin: 0 auto;
-  padding: 4.5rem 1.5rem 3rem;
+  padding: 4.5rem 3rem 3rem;
 }
 
-/* Masthead */
-
-.masthead {
-  display: grid;
-  grid-template-columns: 8.5rem 1fr;
-  gap: 1.75rem;
-  align-items: center;
+.sidebar {
+  position: sticky;
+  top: 4.5rem;
+  align-self: start;
 }
 
 .portrait {
-  width: 8.5rem;
-  height: 8.5rem;
+  width: 12rem;
+  height: 12rem;
   object-fit: cover;
   border-radius: 3px;
   display: block;
 }
 
 .name {
-  margin: 0;
-  font-size: 2.6rem;
-  line-height: 1.05;
+  margin: 1.4rem 0 0;
+  font-size: 2.1rem;
+  line-height: 1.1;
   font-weight: 700;
   letter-spacing: -0.01em;
 }
 
 .role {
-  margin: 0.4rem 0 0.9rem;
-  font-size: 1.12rem;
+  margin: 0.45rem 0 1.1rem;
+  font-size: 1.02rem;
+  line-height: 1.45;
   color: var(--muted);
   font-style: italic;
 }
@@ -163,14 +166,17 @@ summary:focus-visible {
   margin: 0;
   padding: 0;
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem 1.25rem;
+  display: grid;
+  gap: 0.3rem;
   font-size: 1rem;
 }
 
+.content {
+  min-width: 0;
+}
+
 .bio {
-  margin: 2.75rem 0 0;
+  margin: 0;
   font-size: 1.06rem;
   max-width: 38rem;
 }
@@ -357,6 +363,39 @@ details p {
 
 /* Small screens */
 
+/* Tablets and narrow windows: identity across the top, content below */
+@media (max-width: 56rem) {
+  .page {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2.5rem;
+    max-width: calc(var(--measure) + 3rem);
+    padding: 3rem 1.5rem 3rem;
+  }
+
+  .sidebar {
+    position: static;
+    display: grid;
+    grid-template-columns: 8.5rem 1fr;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .portrait {
+    width: 8.5rem;
+    height: 8.5rem;
+  }
+
+  .name {
+    margin-top: 0;
+  }
+
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 1.25rem;
+  }
+}
+
 @media (max-width: 40rem) {
   html {
     font-size: 100%;
@@ -366,7 +405,7 @@ details p {
     padding-top: 2.5rem;
   }
 
-  .masthead {
+  .sidebar {
     grid-template-columns: 1fr;
     gap: 1.1rem;
   }
@@ -410,4 +449,14 @@ details p {
     background: none;
     padding: 0;
   }
+}
+
+/* Simple one-column pages (404) */
+.page.page-single {
+  display: block;
+  max-width: calc(var(--measure) + 3rem);
+}
+
+.page-single .bio {
+  margin-top: 1.5rem;
 }
