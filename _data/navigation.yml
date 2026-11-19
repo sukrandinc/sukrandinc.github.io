@@ -7,14 +7,9 @@
 main:
   - title: "Research"
     url: /publications/
-  
+
+  - title: "Teaching"
+    url: /teaching/
+
   - title: "CV"
     url: /files/resume_sukran.pdf
-
-  - title: "Class Experiments"
-    url: /class-experiments/    
-
-#  - title: "Conferences"
-#    url: /teaching/    
-    
-
