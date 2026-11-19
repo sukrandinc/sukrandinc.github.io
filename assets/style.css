@@ -457,3 +457,8 @@ details p {
 .bio + .bio {
   margin-top: 0.9rem;
 }
+
+.interests {
+  margin: 1.1rem 0 0;
+  font-size: 1.06rem;
+}
