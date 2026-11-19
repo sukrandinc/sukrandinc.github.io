@@ -460,3 +460,7 @@ details p {
 .page-single .bio {
   margin-top: 1.5rem;
 }
+
+.bio + .bio {
+  margin-top: 0.9rem;
+}
