@@ -14,9 +14,18 @@
   <link rel="icon" href="/images/favicon.ico">
   <link rel="preload" href="/assets/fonts/charis-sil-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/charis-sil-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/style.css?v=8">
+  <link rel="stylesheet" href="/assets/style.css?v=9">
 </head>
-<body>
+<body id="top">
+  <nav class="topbar" aria-label="Main">
+    <div class="topbar-inner">
+      <a href="#top">Home</a>
+      <a href="#research">Research</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#experiments">Experiments</a>
+    </div>
+  </nav>
+
   <div class="page">
 
     <header class="sidebar">
@@ -24,10 +33,6 @@
       <div class="id">
         <h1 class="name">Sukran Dinc</h1>
         <p class="role">PhD Candidate in Economics<br>York University</p>
-        <nav class="section-nav" aria-label="Sections">
-          <a href="#research">Research</a>
-          <a href="#teaching">Teaching</a>
-        </nav>
         <ul class="links">
           <li><a href="/files/resume_sukran.pdf">CV</a></li>
           <li><a href="https://www.linkedin.com/in/sukrandinc">LinkedIn</a></li>
@@ -154,6 +159,50 @@
           <li><span><em>Microeconomic Theory</em></span><span class="terms">Multiple terms</span></li>
         </ul>
       </div>
+    </section>
+
+    <section id="experiments" aria-labelledby="experiments-heading">
+      <h2 id="experiments-heading">Experiments</h2>
+      <p class="section-intro">
+        I design and program my own experiments in Qualtrics with custom HTML and JavaScript. My online
+        experiments have collected data from more than 5,000 participants.
+      </p>
+
+      <h3 class="subhead">Research experiments</h3>
+
+      <article class="paper">
+        <h4 class="paper-title">Gender visibility and the choice to collaborate</h4>
+        <p class="meta">Online experiment, 2,812 participants, preregistered (<a href="https://www.socialscienceregistry.org/trials/15798">AEARCTR-0015798</a>)</p>
+        <p class="description">
+          Candidates complete a reasoning task and choose to work alone or in a team; employers then rank
+          and hire them. We vary whether employers hear candidates’ gender through a voice cue, and
+          whether teams are chosen by candidates or assigned at random.
+        </p>
+      </article>
+
+      <article class="paper">
+        <h4 class="paper-title">Algorithmic mediation versus free-form bargaining</h4>
+        <p class="meta">Online experiment with real-time interaction</p>
+        <p class="description">
+          Pairs resolve disputes either through an algorithmic mediation mechanism or through
+          unstructured bargaining, with or without seeing each other’s gender. Built in Qualtrics with
+          SMARTRIQS so participants interact live.
+        </p>
+      </article>
+
+      <article class="paper">
+        <h4 class="paper-title">Conflict resolution training in schools</h4>
+        <p class="meta">Field experiment, 15 public schools in Istanbul, more than 1,000 students</p>
+        <p class="description">
+          A randomized evaluation with Türkiye’s Ministry of National Education of a conflict resolution
+          training program, measuring students’ wellbeing and academic outcomes.
+        </p>
+      </article>
+
+      <h3 class="subhead">Classroom experiments</h3>
+      <p class="description">
+        I co-taught undergraduate Microeconomics using interactive classroom experiments.
+      </p>
     </section>
 
     <footer class="site-footer">
