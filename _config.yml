@@ -24,7 +24,7 @@ author:
   avatar           : "sukran_photo.png"
   name             : "Sukran Dinc"
   pronouns         : # example: "she/her"  
-  bio              : "👩‍🔬 PhD student in Economics at York University
+  bio              : "👩‍🔬 PhD candidate in Economics at York University
                     🛠️ Experiments • Data Analysis • oTree • Python • Stata"
   location         : "Toronto"
   employer         : "York University"
@@ -44,7 +44,7 @@ author:
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : #"academicpages"
+  github           : "sukrandinc"
   kaggle           : # Username  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 

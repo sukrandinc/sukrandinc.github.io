@@ -8,6 +8,6 @@ redirect_from:
 ---
 
 
-I am a fifth-year Ph.D. student in Economics at York University, with research interests in experimental economics, behavioral economics, and mechanism design. I use experiments and data analysis to study how people make decisions and how institutions can be designed to promote fairness and efficiency.
+I am a PhD candidate in Economics at York University, working in experimental economics, behavioral economics and mechanism design. I study how gender shapes the way people work and bargain together: whom we choose to collaborate with, how we assign credit for joint work, and how honestly we negotiate. I also study how institutions such as mediation and dispute resolution systems can be designed to be fair and efficient. My work uses incentivized online experiments, and I have also worked on randomized evaluations in Türkiye, in education and export promotion.
 
 
